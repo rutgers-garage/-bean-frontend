@@ -37,8 +37,12 @@ const ServiceContainer = styled.div`
 `;
 
 const ServiceTitle = styled.div`
-  color: rgba(0, 0, 0 0.4);
+  color: rgba(0, 0, 0, 0.4);
   font-weight: bold;
+`;
+
+const ServiceDesc = styled.div`
+  color: rgba(0, 0, 0, 0.4);
 `;
 
 const Machine = ({ name: machineName }) => {
@@ -78,6 +82,7 @@ const Machine = ({ name: machineName }) => {
         return (
           <ServiceContainer onClick={onClickMachine}>
             <ServiceTitle> {service["Title"]} </ServiceTitle>
+            <ServiceDesc> {service["Description"]} </ServiceDesc>
             {/* {service["ServiceType"]} */}
           </ServiceContainer>
         );
